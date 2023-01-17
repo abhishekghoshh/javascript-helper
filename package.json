@@ -1,0 +1,14 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "Basic programs of js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Abhishek Ghosh",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3"
+  }
+}
