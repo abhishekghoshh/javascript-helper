@@ -1,0 +1,19 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "30 Days of JavaScript",
+  "main": "src/com/js/HelloWorldFunction.js",
+  "scripts": {
+    "start": "src/com/js/HelloWorldFunction.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:abhishekghoshh/30-Days-of-JavaScript.git"
+  },
+  "keywords": [
+    "30-Days-of-JavaScript"
+  ],
+  "author": "Abhishek Ghosh",
+  "license": "ISC"
+}
