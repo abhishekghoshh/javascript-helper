@@ -1,0 +1,6 @@
+<select #componentLink (change)="navigate(componentLink.value)"> 
+    <option>{{defaultLinkValue}}</option>
+    <option [value]="link" *ngFor="let link of links" >
+      {{link}}
+    </option>
+  </select>

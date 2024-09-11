@@ -1,0 +1,33 @@
+<!-- <div *ngIf="courses.length > 0">
+    <h2>List of courses : </h2>
+</div>
+<div *ngIf="courses.length === 0">
+    <h2>No courses found</h2>  
+</div> -->
+
+<div>
+    <input type="text" placeholder="id" #newCourseId disabled [value]="courses.length +1">
+    <input type="text" placeholder="course name" #newCourseName>
+    <button (click)="addCourse(newCourseId.value,newCourseName.value)">Add course</button>
+</div>
+
+<div *ngIf="courses.length > 0; then hasCourses;else noCourses"></div>
+<ng-template #hasCourses>
+    <h2>List of courses : </h2>
+</ng-template>
+<ng-template #noCourses>
+    <h2>No courses found</h2>  
+</ng-template>
+<button (click)="loadCourse()">Load course</button>
+<ul>
+    <li *ngFor="let course of courses; index as i; even as isEven; trackBy:trackCourse;">
+        {{i+1}}-{{course.subject}}
+        <!-- <span *ngIf="isEven">-Best course</span> -->
+        <button (click)="removeCourse(course)">remove</button>
+    </li>
+</ul>
+<p>Our custom directive implementation</p>
+<input appInputFormat format="uppercase" placeholder="Custom directive example"><br/>
+
+<p>Safe Traversal operator example</p>
+<p>{{getCourseByIndex(6)?.subject}}</p>

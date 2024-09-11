@@ -1,0 +1,26 @@
+<p>sample works!</p>
+<a [routerLink]="binding" class="btn btn-primary">Binding component</a>
+<p>{{ name }}</p>
+<p>{{ getName() }}</p>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
+
+
+<br/>
+<select>
+  <option *ngFor="let user of users">
+    {{ user }}
+  </option>
+</select>
+
+<app-panel>
+  <ng-container class="heading"><h2>Heading</h2></ng-container>
+  <div class="body">
+    <h3>Body</h3>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+  </div>
+</app-panel>
+

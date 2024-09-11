@@ -1,0 +1,49 @@
+<div>
+  <p>{{ title }}</p>
+  <p [textContent]="title"></p>
+  <img src="{{ imageUrl }}" />
+  <img [src]="imageUrl" />
+  <table>
+    <tr>
+      <td [attr.colspan]="colspan">Only one TD</td>
+    </tr>
+  </table>
+
+  <button class="btn btn-primary" [class.active]="isActive">
+    Bootstrap-Button-Primary
+  </button>
+  <button class="btn btn-primary" [style.background]="isActive ? 'blue' : 'red'">
+    Button-Style-Binding
+  </button>
+  <button (click)="onClick(this, $event)">Button</button>
+
+  <div (click)="onDivClick()">
+    <button (click)="onButtonClick($event)">Event bubbling example</button>
+  </div>
+
+
+  <favourite [isLiked]="favourite.isLiked" (changed)="onFavouriteChanged($event)">
+    
+  </favourite>
+
+
+  <input (keyup)="onKeyUpWithoutEventFilter($event)" />
+  <input (keyup.enter)="onKeyUpWithEventFilter()" />
+
+  <input (keyup.enter)="onKeyUp($event)" /><br />
+  <input #name (keyup.enter)="onKeyUpWithTemplateVariable(name.value)" /><br />
+
+  <input (keyup)="fullname = $event.target.value" (keyup.enter)=" logFullname()" [value]="fullname" />
+  {{ fullname }}<br />
+  <input [(ngModel)]="fullName" />
+  {{ fullName }}<br />
+
+  {{course.title | uppercase}}<br />
+  {{course.rating | number:'.2'}}<br />
+  {{course.students  | number }}<br />
+  {{course.price | currency:'AUD': true}}<br />
+  {{course.releaseData | date:'shortDate'}}<br />
+
+
+  {{loremIpsumText| summary:40}}
+</div>
